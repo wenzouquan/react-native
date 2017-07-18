@@ -47,7 +47,7 @@ gulp
 
 2、通过路由访问模块 navigate('indexIndexIndex', { name: 'Jane' })
 
-<img src="https://static.oschina.net/uploads/space/2017/0718/193217_r45W_1160364.png"  />
+<img src="https://static.oschina.net/uploads/space/2017/0718/193217_r45W_1160364.png" />
 
 <img src="https://static.oschina.net/uploads/space/2017/0718/193234_653t_1160364.png" />
 
