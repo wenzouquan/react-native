@@ -51,9 +51,42 @@ gulp
 
 # 模块目录
 
-
+├── README.md
+├── app.json
+├── gulpfile.js
+├── index.android.js
+├── index.ios.js
+├── package.json
+└── src
+    ├── app.js
+    ├── config.js
+    ├── devTool
+    │   ├── cmd
+    │   │   ├── lib.js
+    │   │   ├── makeEntry.js
+    │   │   └── makeMod.js
+    │   └── ejs
+    │       ├── main.ejs
+    │       └── mod
+    │           ├── index
+    │           │   ├── index.jsx.ejs
+    │           │   └── index.store.ejs
+    │           └── index.ejs
+    ├── main.js
+    └── modules
+        └── index
+            ├── test
+            │   ├── index.css
+            │   ├── index.css.js
+            │   ├── index.store.js
+            │   ├── index.view.js
+            │   ├── index2.store.js
+            │   └── index2.view.js
+            ├── testIndex.js
+            └── testIndex2.js
 
 这样我们团队成员，只需在自己的模块下就可以完成所有的工作 比如 css 修改  , 数据与服务器对接 。 各自完成自己的模块开发，就算某个模块出错也不影响其它模块正常运行。
+
 
 
 
