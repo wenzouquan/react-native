@@ -7,12 +7,8 @@ var entry = reactApp.params.entry;
 var navigates = {};
 navigates[entry] = {};
   
-navigates['IndexTestIndex'] = {
-	screen: require("./modules/index/testIndex.js").default
-};
-  
-navigates['IndexTestIndex2'] = {
-	screen: require("./modules/index/testIndex2.js").default
+navigates['IndexIndexIndex'] = {
+	screen: require("./modules/index/indexIndex.js").default
 };
 
 const app = StackNavigator(navigates);
