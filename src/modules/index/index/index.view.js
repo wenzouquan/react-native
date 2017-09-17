@@ -18,8 +18,8 @@ import {
   ImagePickerIOS,
   InteractionManager,
   Image,
+  WebView
 } from 'react-native';
-
 
 import styles from "./index.css.js";
 export function header(navigation) {
@@ -52,12 +52,11 @@ class ComponentView extends Component {
           <View style={styles.VideoBox}>
             <VideoPlayer
           //  source = {require(state.movieUrl)}
-           // source = {require('/Volumes/UNTITLED/www/EnglishStudy/oceans2.mp4')}
-            
+            //source = {require('/Volumes/UNTITLED/www/EnglishStudy/oceans2.mp4')}
             controlTimeout={ 1500 }  
              seekColor={ '#FFF' } 
-            // source={{uri: state.movieUrl}}
-            source={{uri: state.movieUrl,type:'mp4',isAsset:true,isNetwork:false}} // 视频的URL地址，或者本地地址，都可以. 
+            source={{uri: state.movieUrl,mainVer:1,patchVer:0 }}
+            //source={{uri: state.movieUrl,type:'mp4',isAsset:true,isNetwork:false}} // 视频的URL地址，或者本地地址，都可以. 
              rate={1.0}                   // 控制暂停/播放，0 代表暂停paused, 1代表播放normal. 
              volume={1.0}                 // 声音的放大倍数，0 代表没有声音，就是静音muted, 1 代表正常音量 normal，更大的数字表示放大的倍数 
              muted={false}                // true代表静音，默认为false. 
@@ -75,15 +74,10 @@ class ComponentView extends Component {
              style={styles.VideoBoxContent} />
              </View>
             <View style={styles.VideoTextBox}>
-               <Button  style={styles.mgt10} title="播放http视频" onPress={()=> navigate('IndexIndexIndex', {
-        movieUrl: 'http://boxphp.oss-cn-hangzhou.aliyuncs.com/video/UpBluRay/0_848x476.mp4',
-        title:'乱世佳人',
-      })}/>
-                <Button  style={styles.mgt10} title="选择视频" onPress={()=>  ImagePickerIOS.canRecordVideos(() => alert('能获取视频'))}/>
               <View   style={styles.VideoTextBoxItem}>
               <Text onPress={()=> this.props.showChinese()}>
               {state.engWord.split(' ').map(function(index, elem) {
-                  return <Text onPress={()=> searchWords(index)}  style={styles.English}>{index} </Text>
+                  return index && <Text onPress={()=> searchWords(index)}  style={styles.English}>{index} </Text>
               })}
               </Text>
               <View  style={[{ display: state.showChineseStatus} ]}><Text>{state.chineseWord}</Text></View>

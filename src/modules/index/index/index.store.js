@@ -2,7 +2,7 @@ let initialState = {
 
   state: {
     count: 0,
-    movieUrl: '/Volumes/UNTITLED/www/EnglishStudy/oceans2.mp4',
+    movieUrl: 'http://boxphp.oss-cn-hangzhou.aliyuncs.com/video/UpBluRay/0_848x476.mp4',
     showChineseStatus: 'none',
     showSearchWords: 'none',
     searchWordInfo: {

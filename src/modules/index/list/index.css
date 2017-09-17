@@ -1,0 +1,5 @@
+.contains {
+    flex: 1;
+}
+.MovieList{border-top-color: #ddd;border-top-width:1; margin-top:10;padding:10 ;background-color: #ffffff;}
+.Button{ bottom: 0; position: absolute; width: 100% }
